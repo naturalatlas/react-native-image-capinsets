@@ -4,6 +4,7 @@ import {
   View,
   Image,
   requireNativeComponent,
+  ImageSourcePropType
 } from 'react-native';
 import resolveAssetSource from 'react-native/Libraries/Image/resolveAssetSource';
 
@@ -34,7 +35,7 @@ class ImageCapInset extends Component {
 
 ImageCapInset.propTypes = {
   ...View.propTypes,
-  source: Image.propTypes.source,
+  source: ImageSourcePropType,
   capInsets: PropTypes.shape({
     top: PropTypes.number,
     left: PropTypes.number,
