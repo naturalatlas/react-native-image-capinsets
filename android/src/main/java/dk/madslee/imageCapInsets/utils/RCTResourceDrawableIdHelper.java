@@ -3,6 +3,7 @@ package dk.madslee.imageCapInsets.utils;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import androidx.core.content.ContextCompat;
 import com.facebook.common.util.UriUtil;
 
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public class RCTResourceDrawableIdHelper {
 
     public @Nullable Drawable getResourceDrawable(Context context, @Nullable String name) {
         int resId = getResourceDrawableId(context, name);
-        return resId > 0 ? context.getResources().getDrawable(resId) : null;
+        return resId > 0 ? ContextCompat.getDrawable(context, resId) : null;
     }
 
     public Uri getResourceDrawableUri(Context context, @Nullable String name) {
